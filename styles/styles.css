@@ -83,6 +83,14 @@ section {
   transform: translateY(0) scale(1);
 }
 
+.active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: var(--transiton-1);
+}
+.active-btn i {
+  color: var(--color-white) !important;
+}
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -94,6 +102,7 @@ section {
   justify-content: center;
   transform: translateY(-50%);
 }
+
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -107,8 +116,9 @@ section {
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
 }
+
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */

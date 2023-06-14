@@ -3,4 +3,4 @@
 browser-sync start --server --directory --files "*"
 
 start here: https://youtu.be/xV7S8BhIeBo?t=2235
-watch upto 56.52 again with concentration
+watch from 1:19:41

@@ -327,6 +327,7 @@ section {
   position: relative;
   &::before{
     content: '';
+    position: absolute;
     left: 50%;
     top: 0;
     width: 40%;
@@ -404,7 +405,7 @@ section {
     img{
       width: 100%;
       height: 300px;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 15px;
     }
     .hover-items{
@@ -419,6 +420,9 @@ section {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      opacity: 0;
+      transform: scale(0);
+      transition: var(--transiton-1);
       h3{
         font-size: 1.5rem;
         color: var(--color-white);
@@ -444,10 +448,22 @@ section {
             color: var(--color-white);
             margin: 0 1rem;
           }
+
+          &:hover{
+            background-color: var(--color-white);
+            i{
+              color: var(--color-primary);
+            }
+          }
         }
       }
     }
   }
+}
+
+.portfolio-item:hover .hover-items{
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Independent content */

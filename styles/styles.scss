@@ -7,7 +7,7 @@
 
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #27AE60;
+  --color-secondary: #13c9d6;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -17,14 +17,14 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);  
   --br-sm-2: 14px;
   --transiton-1: all .4s ease-in-out;
 }
 
 .light-mode {
   --color-primary: #FFFFFF;
-  --color-secondary: #F56692;
+  --color-secondary: #f68700;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -208,9 +208,9 @@ section {
         height: 100%;
         object-fit: cover;
         transition: var(--transiton-1);
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         &:hover{
-          filter: grayscale(0%);
+          filter: grayscale(100%);
         }
       }
     }

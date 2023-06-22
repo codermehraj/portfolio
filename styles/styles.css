@@ -143,6 +143,9 @@ section {
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
 }
+.controls .control:hover {
+  transform: scale(1.5);
+}
 
 .controls .control i {
   font-size: 1.2rem;
@@ -363,7 +366,7 @@ section {
 
 .stat-title {
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-align: center;
   padding: 3.5rem 0;
   position: relative;

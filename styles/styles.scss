@@ -637,7 +637,7 @@ section {
 
   .right-contact {
       flex: 3;
-      margin-left: 3rem;
+      margin-left: 3rem;     
       .input-control {
           margin: 1.5rem 0;
           input, textarea {
@@ -685,7 +685,7 @@ section {
   align-items: center;
   overflow: hidden;
   .btn-txt{
-    padding: 0 2rem;    
+    padding: 0 2rem;
   }
   .btn-icon{
       background-color: var(--color-secondary);

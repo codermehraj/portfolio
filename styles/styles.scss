@@ -7,7 +7,7 @@
 
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #27AE60;
+  --color-secondary: #13c9d6;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -17,14 +17,14 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);  
   --br-sm-2: 14px;
   --transiton-1: all .4s ease-in-out;
 }
 
 .light-mode {
   --color-primary: #FFFFFF;
-  --color-secondary: #F56692;
+  --color-secondary: #f68700;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -208,9 +208,9 @@ section {
         height: 100%;
         object-fit: cover;
         transition: var(--transiton-1);
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         &:hover{
-          filter: grayscale(0%);
+          filter: grayscale(100%);
         }
       }
     }
@@ -286,16 +286,20 @@ section {
   }
   .left-about{
     padding-right: 5rem;
+    h4{
+      text-align: left;
+    }
     p{
       line-height: 2rem;
       padding: 1rem;
       color: var(--color-grey-1);
+      text-align: justify;
     }
     h4{
       font-size: 2rem;
       text-transform: uppercase;
-    }
-  }
+    }    
+  }  
 }
 
 .about-stats{
@@ -571,16 +575,21 @@ section {
 
       .contact-info {
           .contact-item {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              p {
-                  margin: .3rem 0 !important;
+              display: grid;
+              grid-template-columns: 140px 1fr;
+              //align-items: start;              
+              //justify-content: space-between;
+              p { 
+                  align-items: end;                 
                   padding: 0 !important;
+                  margin-left: .3rem !important;
+                  margin-top: .3rem !important;
+                  margin-bottom: .3rem !important;
               }
               .icon {
+                align-items: start;
                   display: grid;
-                  grid-template-columns: 40px 1fr;
+                  grid-template-columns: 35px 1fr;
                   i {
                       display: flex;
                       align-items: center;

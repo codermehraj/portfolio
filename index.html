@@ -678,21 +678,21 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <form  class="contact-form" onsubmit="sendEmail(); reset(); return false;">
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
+                                <input type="text" required placeholder="YOUR NAME" id = "name">
+                                <input type="email" required placeholder="YOUR EMAIL" id = "email">
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
+                                <input type="text" required placeholder="ENTER SUBJECT" id = "subject">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                                <textarea name="" id="message" cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <a href="#" class="main-btn">
+                                <a href="" class="main-btn">
                                     &nbsp; &nbsp;
-                                    <span class="btn-text">Submit</span>
+                                    <span class="btn-text"><button type="submit">Submit</button></span>
                                     &nbsp; &nbsp;
                                     <span class="btn-icon"><i class="fa-solid fa-forward"></i></span>
                                 </a>
@@ -728,5 +728,24 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "codermehraj@gmail.com",
+            Password : "FD51002A1FCCADC8C025C3FF6B1B57A0F596",
+            To : 'codermehraj@gmail.com',
+            From : "codermehraj@gmail.com",
+            Subject : "NEW PORTFOLIO ENQUIRY : " + document.getElementById("subject").value,
+            Body : "EMAIL FROM : " + document.getElementById("name").value 
+            + "<br> EMAIL: " + document.getElementById("email").value 
+            + "<br> SUBJECT: " + document.getElementById("subject").value 
+            + "<br> MESSAGE: " + document.getElementById("message").value
+        }).then(
+          message => alert("Thanks for contacting :D")
+        );
+    }
+    </script>
 </body>
 </html>

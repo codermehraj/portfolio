@@ -575,16 +575,21 @@ section {
 
       .contact-info {
           .contact-item {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              p {
-                  margin: .3rem 0 !important;
+              display: grid;
+              grid-template-columns: 140px 1fr;
+              //align-items: start;              
+              //justify-content: space-between;
+              p { 
+                  align-items: end;                 
                   padding: 0 !important;
+                  margin-left: .3rem !important;
+                  margin-top: .3rem !important;
+                  margin-bottom: .3rem !important;
               }
               .icon {
+                align-items: start;
                   display: grid;
-                  grid-template-columns: 40px 1fr;
+                  grid-template-columns: 35px 1fr;
                   i {
                       display: flex;
                       align-items: center;

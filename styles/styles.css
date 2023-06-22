@@ -574,17 +574,20 @@ section {
   line-height: 2rem;
 }
 .contact-content-con .left-contact .contact-info .contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 140px 1fr;
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
+  align-items: end;
   padding: 0 !important;
+  margin-left: 0.3rem !important;
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.3rem !important;
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon {
+  align-items: start;
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 35px 1fr;
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon i {
   display: flex;
